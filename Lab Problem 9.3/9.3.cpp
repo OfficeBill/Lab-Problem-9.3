@@ -15,7 +15,7 @@ void displayRun(int values[], int size);
 
 int main(void)
 {
-	int values[], size = 20;
+	int values[20], size = 20;
 	srand(time(0));
 	for (int i = 0; i < 20; i++)
 	{
@@ -43,22 +43,22 @@ int main(void)
 			break;
 		}
 	}
+	displayRun;
+
 }
 
 void displayRun(int values[], int size)
 {
-	int runnum = 1
-		bool run;
-	for (int i = 0; i < size; i++)
+		for (int i = 0; i < 20; i++)
 	{
 		if (values[i] == values[i + 1])
 		{
-			runnum = 1;
-			run = true;
-			for (run; run != true; runnum + 1)
-			{
-
-			}
+			cout << "(";
+		}
+		cout << values[i];
+		if (values[i] == values[i - 1])
+		{
+			cout << ")";
 		}
 	}
 }
