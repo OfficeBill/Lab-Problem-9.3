@@ -12,6 +12,7 @@
 using namespace std;
 
 void displayRun(int values[], int size);
+bool hasRun(int values[], int size);
 
 int main(void)
 {
@@ -20,18 +21,25 @@ int main(void)
 	for (int i = 0; i < 20; i++)
 	{
 		int max_value = 6;
-		int randnum = rand() % max_value+1;
+		int randnum = rand() % max_value + 1;
 		values[i] = randnum;
 		cout << values[i] << " ";
 	}
 	cout << endl;
+	if (hasRun(values, size) == true)
+	{
+		cout << "Has run: ";
+	}
+	else
+	{
+		cout << "No run: ";
+	}
 	displayRun(values, size);
-
 }
 
 void displayRun(int values[], int size)
 {
-		for (int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
 		if (values[i] == values[i + 1])
 		{
@@ -47,6 +55,17 @@ void displayRun(int values[], int size)
 		else
 		{
 			cout << values[i] << " ";
+		}
+	}
+}
+
+bool hasRun(int values[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (values[i] == values[i + 1])
+		{
+			return true;
 		}
 	}
 }
