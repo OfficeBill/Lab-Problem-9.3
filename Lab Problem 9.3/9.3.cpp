@@ -67,5 +67,5 @@ bool hasRun(int values[], int size)
 		{
 			return true;
 		}
-	} 
+	}
 }
